@@ -1,8 +1,17 @@
 ```css
 
-// Tips: How to change the origin of where things should pin
-
+// Tips: 
+// 1. How to change the origin of where things should pin
 transform-origin: 10px 10px;
+
+// 2. Set logo as background-image, set the text-indent to -10000;
+
+// 3. Use color black with different opacity to create illusion of color scheme. 
+
+// 4. Font smoothing 
+body {
+    -webkit-font-smoothing: antialiased;
+}
 
 /* 
 TheNetNinja: CSS Animation
@@ -94,7 +103,53 @@ flex-basis: is like min-width but it will shrink when the browser is too small
 
 flex: flex-grow flex-shrink flex-basis;
 
+/* 
+TheNetNinja: CSS Grid 
+Css Grid is a 2 dimension positioning system. It's not hard to learn, just a few fundamentals concepts
+*/
 
+// 1. First, we need to set the parent container to a display of grid
+
+display: grid;
+
+// 2. Then we need to specify how many columns (important) and rows (optional) that the grid have
+
+grid-template-columns: repeat(12, 1fr); //repeat 12 times with each col contain 1 fraction
+grid-template-rows: ;
+
+// minmax will set the height of the row
+grid-auto-rows: minmax(100px, auto);
+
+grid-gap: 10px;
+
+// 3. We can control it freely by using grid-area and grid-template-area. 
+
+// Example code: 
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 10px;
+    grid-template-areas: 
+    "header header header header"
+    "section section . ."
+    "footer footer footer footer";   
+}
+
+// The dot is empty space in the grid
+
+header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+}
+
+section {
+    grid-area: section;
+}
 
 
 
