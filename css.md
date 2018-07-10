@@ -1,4 +1,85 @@
 ```css
 
+// Tips: How to change the origin of where things should pin
+
+transform-origin: 10px 10px;
+
+/* 
+TheNetNinja: CSS Animation
+- transform
+    - translate
+    - scale
+    - rotate 
+- transition
+    - property, time, delay, timing function
+- keyframes
+*/
+
+// 1. You set the ending state in the :hover or in a different class, then you add the transition property in the initial state, the computer will handle the rest. 
+
+// Example: 
+
+.button {
+    color: red;
+    font-size: 15px;
+    transition: all 1s ease-in-out;
+}
+
+.button:hover {
+    color: green;
+    transform: scale(1.05) translate(-20px, 0px);
+}
+
+// When the mouse is hovering over the button, the animation will happen.
+
+// 2. Another powerful idea in CSS animation is keyframes. You set a name for the animation and decide what it will be in any point in time. 
+
+@keyframes drive {
+    from {
+
+    }
+
+    to {
+
+    }
+}
+
+.car {
+    animation-name: drive;
+}
+
+@keyframes jump {
+    0% { }
+    10% { }
+    100% { }
+}
+
+.human {
+    animation-name: jump;
+    animation-duration: 3s;
+    animation-fill-mode: (forwards, backwards, both);
+    animation-delay: 2s;
+    animation-iteration-count: (3, infinite);
+    animation-direction: reverse (alternate, alternate-reverse, normal);
+    animation-timing-function: ease;
+    animation-play-state: ;
+    animation: name duration delay timing function iteration-count direction;
+}
+
+// The fundamentals of CSS Animation ends here. 
+
+// Code for animation using jQuery (click)
+
+$('button').on('click', function() {
+    $(this).closest('li')
+    .find('img')
+    .clone()
+    .addClass('zoom')
+    .appendTo('body');
+
+    setTimeout(function() {
+        $('zoom').remove();
+    }, 1000);
+})
 
 ```
