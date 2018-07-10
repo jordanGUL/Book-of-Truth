@@ -82,4 +82,34 @@ $('button').on('click', function() {
     }, 1000);
 })
 
+/*
+TheNetNinja - CSS Flexbox 
+Flexbox is good for one direction, you set it by display: flex on the parent element.
+*/
+
+flex-grow: can be used as grid system. 
+flex-shrink: the rate they shrink
+flex-wrap: will wrap the element if it hits the min-width / flex-basis property
+flex-basis: is like min-width but it will shrink when the browser is too small
+
+flex: flex-grow flex-shrink flex-basis;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
